@@ -1,6 +1,6 @@
 
 //Hice un simulador de calculos en pagos en cuotas.... 
-
+function calculo() {
 let valorProducto = parseFloat (prompt ("Ingrese el valor del producto a comprar (sin el signo de $)"))
 
 if (!isNaN(valorProducto)) {
@@ -16,10 +16,18 @@ if (!isNaN(valorProducto)) {
             cantidadDeCuotas=false
             break }
 
-        if (cantidadDeCuotas=="1"){alert ("Abonas " + cantidadDeCuotas + " pago de $ " + cuotaAPagar + " total.")} 
+        if (cantidadDeCuotas=="1"){alert ("Abonas " + cantidadDeCuotas + " pago de $ " + cuotaAPagar + " total.")
+                                    break} 
           else {alert ("Abonas " + cantidadDeCuotas + " pagos de $ " + cuotaAPagar + " mensual.")
             break}
                          }
     }
 
 else {alert ("No ingreso un numero")}
+
+}
+
+calculo()
+let confirmacion = prompt ("Desea hacer otro calculo? (si/no)")
+if (confirmacion=== "si") {calculo()}
+else {alert ("Gracias por confiar!")}
